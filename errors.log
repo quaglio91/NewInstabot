@@ -1,0 +1,153 @@
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 438, in get_username_by_user_id
+    all_data = json.loads(r.text)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 648, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "/Users/gianni/Desktop/instabot.py-master/src/sql_updates.py", line 81, in insert_username
+    VALUES('"+user_id+"','"+username+"','"+ str(now) +"')")
+TypeError: coercing to Unicode: need string or buffer, bool found
+ERROR:root:Except on get_username_by_user_id
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 438, in get_username_by_user_id
+    all_data = json.loads(r.text)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 648, in follow
+    insert_username(self, user_id=user_id, username=username)
+  File "/Users/gianni/Desktop/instabot.py-master/src/sql_updates.py", line 81, in insert_username
+    VALUES('"+user_id+"','"+username+"','"+ str(now) +"')")
+TypeError: coercing to Unicode: need string or buffer, bool found
+ERROR:root:Except on auto_unfollow!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 881, in auto_unfollow
+    r = self.s.get(url_tag)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /9476488961/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10cd22090>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 641, in follow
+    follow = self.s.post(url_follow)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/6578262136/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10f6d20d0>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+ERROR:root:Except on auto_unfollow!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 887, in auto_unfollow
+    r = self.s.get(url_tag)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+ConnectionError: ('Connection aborted.', error(54, 'Connection reset by peer'))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 602, in like
+    like = self.s.post(url_likes)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+ConnectionError: ('Connection aborted.', error(50, 'Network is down'))
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 642, in follow
+    follow = self.s.post(url_follow)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/9779190790/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10dbd9510>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+ERROR:root:Except on auto_unfollow!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 887, in auto_unfollow
+    r = self.s.get(url_tag)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /6989243336/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10dbd9510>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 602, in like
+    like = self.s.post(url_likes)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/likes/1950805843491737939/like/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10dbd9f50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+ERROR:root:Except on follow!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 642, in follow
+    follow = self.s.post(url_follow)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+ConnectionError: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: /web/friendships/229799005/follow/ (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10dbd9590>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known',))
+ERROR:root:Except on like!
+Traceback (most recent call last):
+  File "/Users/gianni/Desktop/instabot.py-master/src/instabot.py", line 602, in like
+    like = self.s.post(url_likes)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Library/Python/2.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Library/Python/2.7/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+ReadTimeout: HTTPSConnectionPool(host='www.instagram.com', port=443): Read timed out. (read timeout=None)
